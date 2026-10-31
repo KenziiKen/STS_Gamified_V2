@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://m0emv31huxjk"]
+
+[ext_resource type="PackedScene" uid="uid://cs4rhl8cmkawl" path="res://fade.tscn" id="1_mybhi"]
+[ext_resource type="Script" uid="uid://cxey0lv2k8vp" path="res://cutscn_1.gd" id="1_tsye8"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_djgs7"]
+font_size = 37
+
+[node name="cutscn_1" type="Node2D" unique_id=2037829497]
+script = ExtResource("1_tsye8")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1628428967]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1448612640]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+color = Color(0.6420489, 0.47526485, 0.58875847, 1)
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=1151511863]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -153.5
+offset_top = -25.5
+offset_right = 153.5
+offset_bottom = 25.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+text = "cutscn"
+label_settings = SubResource("LabelSettings_djgs7")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Fade" parent="." unique_id=1156103037 instance=ExtResource("1_mybhi")]
