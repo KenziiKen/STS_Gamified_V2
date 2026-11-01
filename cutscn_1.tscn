@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cxey0lv2k8vp" path="res://cutscn_1.gd" id="1_tsye8"]
 [ext_resource type="PackedScene" uid="uid://dwgcx56yalawj" path="res://alex.tscn" id="3_5sycg"]
+[ext_resource type="PackedScene" uid="uid://cs4rhl8cmkawl" path="res://fade.tscn" id="3_hh83w"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_djgs7"]
 font_size = 37
@@ -40,4 +41,6 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Alex" parent="CanvasLayer" unique_id=373080059 instance=ExtResource("3_5sycg")]
-position = Vector2(-629, 3)
+position = Vector2(-4, 363)
+
+[node name="Fade" parent="CanvasLayer" unique_id=1156103037 instance=ExtResource("3_hh83w")]
