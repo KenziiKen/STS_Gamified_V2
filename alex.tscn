@@ -3,12 +3,21 @@
 [ext_resource type="Texture2D" uid="uid://ldlwby2icd5f" path="res://docs/Alex.png" id="1_apn5y"]
 [ext_resource type="Script" uid="uid://b2k58l63uc5bv" path="res://alex.gd" id="1_mfg46"]
 
-[node name="Alex" type="Node2D" unique_id=373080059]
-position = Vector2(-3, 5)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mfg46"]
+size = Vector2(64, 99)
+
+[node name="Alex" type="CharacterBody2D" unique_id=1994583944]
 script = ExtResource("1_mfg46")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=719760158]
-position = Vector2(109, 7)
-scale = Vector2(0.25, 0.25)
+position = Vector2(0, 1)
+scale = Vector2(0.32, 0.32)
 texture = ExtResource("1_apn5y")
 hframes = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=5836826]
+position = Vector2(-3, 2.5)
+shape = SubResource("RectangleShape2D_mfg46")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2109885875]
+zoom = Vector2(1.685, 1.685)
