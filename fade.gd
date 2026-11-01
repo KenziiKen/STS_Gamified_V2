@@ -5,6 +5,7 @@ extends CanvasLayer
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	color_rect.color.a = 0.0
+	pass
 
 func fade_(target_alpha: float, duration: float = 1.0):
 	var tween = create_tween()

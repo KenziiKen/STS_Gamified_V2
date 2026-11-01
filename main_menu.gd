@@ -5,10 +5,9 @@ extends Control
 func _ready() -> void:
 	pass # Replace with function body.
 
-func _on_quit_pressed() -> void:
-	get_tree().quit()
-
 func _on_start_pressed() -> void:
 	fade.transition_to_scene("res://cutscn_1.tscn")
-	
-	
+
+func _on_chapts_pressed() -> void:
+	fade.transition_to_scene("res://chapter.tscn")
+	#pass # Replace with function body.

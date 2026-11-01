@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://bsprxc3klmad1"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_dpt1k"]
+font_size = 53
+
+[node name="chapter" type="Control" unique_id=554245841]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=896472403]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.443631, 0.58164525, 0.75372976, 1)
+
+[node name="Label" type="Label" parent="." unique_id=1286787457]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "CHAPTER SCN"
+label_settings = SubResource("LabelSettings_dpt1k")

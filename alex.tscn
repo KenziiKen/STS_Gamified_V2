@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dwgcx56yalawj"]
+
+[ext_resource type="Texture2D" uid="uid://ldlwby2icd5f" path="res://docs/Alex.png" id="1_apn5y"]
+[ext_resource type="Script" uid="uid://b2k58l63uc5bv" path="res://alex.gd" id="1_mfg46"]
+
+[node name="Alex" type="Node2D" unique_id=373080059]
+position = Vector2(-3, 5)
+script = ExtResource("1_mfg46")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=719760158]
+position = Vector2(754, 327)
+scale = Vector2(0.59375, 0.59375)
+texture = ExtResource("1_apn5y")
+hframes = 4
