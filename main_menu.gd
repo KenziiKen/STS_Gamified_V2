@@ -9,5 +9,6 @@ func _on_start_pressed() -> void:
 	fade.transition_to_scene("res://cutscn_1.tscn")
 
 func _on_chapts_pressed() -> void:
-	fade.transition_to_scene("res://chapter.tscn")
+	#fade.transition_to_scene("res://chapter.tscn")
+	get_tree().change_scene_to_file("res://chapter.tscn")
 	#pass # Replace with function body.

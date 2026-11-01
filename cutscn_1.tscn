@@ -20,7 +20,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-color = Color(0.6420489, 0.47526485, 0.58875847, 1)
+color = Color(0.16574937, 0.15769282, 0.19400856, 1)
 
 [node name="Label" type="Label" parent="CanvasLayer" unique_id=1151511863]
 anchors_preset = 8
@@ -41,6 +41,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Alex" parent="CanvasLayer" unique_id=373080059 instance=ExtResource("3_5sycg")]
-position = Vector2(-4, 363)
+position = Vector2(329, 332)
 
 [node name="Fade" parent="CanvasLayer" unique_id=1156103037 instance=ExtResource("3_hh83w")]
+visible = false

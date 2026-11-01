@@ -7,4 +7,5 @@ func _ready() -> void:
 
 func _on_back_pressed() -> void:
 	fade.transition_to_scene("res://main_menu.tscn")
+	get_tree().change_scene_to_file("res://main_menu.tscn")
 	pass # Replace with function body.

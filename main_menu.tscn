@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://kq1m317dbkad"]
 
 [ext_resource type="Script" uid="uid://th5vly6iyegb" path="res://main_menu.gd" id="1_06t4h"]
-[ext_resource type="Texture2D" uid="uid://cvl5wxkht6nom" path="res://hmn.png" id="2_7vrkn"]
+[ext_resource type="Texture2D" uid="uid://c1y7ao0sbw52w" path="res://Alex_MM.png" id="2_fu7sn"]
 [ext_resource type="PackedScene" uid="uid://cs4rhl8cmkawl" path="res://fade.tscn" id="3_fu7sn"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fu7sn"]
-texture = ExtResource("2_7vrkn")
+texture = ExtResource("2_fu7sn")
 modulate_color = Color(0.60933006, 0.6093301, 0.60933006, 1)
 
 [node name="Main_menu" type="Control" unique_id=107471810]
@@ -42,10 +42,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 106.0
-offset_top = -61.0
-offset_right = 663.0
-offset_bottom = 124.0
+offset_left = -512.0
+offset_top = -24.0
+offset_right = -71.0
+offset_bottom = 161.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 25
@@ -61,6 +61,7 @@ theme_override_font_sizes/font_size = 52
 text = "CHAPTERS"
 
 [node name="Fade" parent="." unique_id=1156103037 instance=ExtResource("3_fu7sn")]
+visible = false
 
 [connection signal="pressed" from="VBoxContainer/start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/chapts" to="." method="_on_chapts_pressed"]
