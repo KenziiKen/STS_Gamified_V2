@@ -57,13 +57,13 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 52
 text = "CHAPTERS"
 
-[node name="chapts2" type="Button" parent="VBoxContainer" unique_id=2085858421]
+[node name="credits" type="Button" parent="VBoxContainer" unique_id=2085858421]
 layout_mode = 2
 theme_override_font_sizes/font_size = 52
 text = "CREDITS"
 
 [node name="Fade" parent="." unique_id=1156103037 instance=ExtResource("3_fu7sn")]
-visible = false
 
 [connection signal="pressed" from="VBoxContainer/start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/chapts" to="." method="_on_chapts_pressed"]
+[connection signal="pressed" from="VBoxContainer/credits" to="." method="_on_credits_pressed"]

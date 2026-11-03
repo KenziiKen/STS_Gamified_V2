@@ -57,10 +57,10 @@ label_settings = SubResource("LabelSettings_dpt1k")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=801936379]
 layout_mode = 0
-offset_left = 27.445
-offset_top = 554.1749
-offset_right = 237.99365
-offset_bottom = 596.1749
+offset_left = 1.0
+offset_top = -1.0
+offset_right = 211.54865
+offset_bottom = 53.338623
 scale = Vector2(1.285, 1.285)
 
 [node name="back" type="Button" parent="VBoxContainer" unique_id=1879250941]
