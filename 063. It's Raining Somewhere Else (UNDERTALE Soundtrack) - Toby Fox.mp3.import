@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ywvi8wx2thph"
+path="res://.godot/imported/063. It's Raining Somewhere Else (UNDERTALE Soundtrack) - Toby Fox.mp3-ece08af1a502078339942586aa38d66a.mp3str"
+
+[deps]
+
+source_file="res://063. It's Raining Somewhere Else (UNDERTALE Soundtrack) - Toby Fox.mp3"
+dest_files=["res://.godot/imported/063. It's Raining Somewhere Else (UNDERTALE Soundtrack) - Toby Fox.mp3-ece08af1a502078339942586aa38d66a.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

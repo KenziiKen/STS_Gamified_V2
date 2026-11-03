@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dt6vw6wmgg4gn"]
+
+[ext_resource type="AudioStream" uid="uid://ywvi8wx2thph" path="res://063. It's Raining Somewhere Else (UNDERTALE Soundtrack) - Toby Fox.mp3" id="1_qc0l7"]
+
+[node name="audio" type="AudioStreamPlayer2D" unique_id=192431405]
+stream = ExtResource("1_qc0l7")
+volume_db = -12.17
+autoplay = true

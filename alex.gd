@@ -1,7 +1,7 @@
 extends CharacterBody2D
 #@onready var alex: Sprite2D = $Sprite2D
 @onready var alex: Sprite2D = $Sprite2D
-@export var speed: float = 350.0
+@export var speed: float = 300.0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
