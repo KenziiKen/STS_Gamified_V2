@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c5kcmk1yfcxyb"]
 
 [ext_resource type="Script" uid="uid://7w43gdiwb6ll" path="res://scene_1.gd" id="1_3sd7o"]
+[ext_resource type="PackedScene" uid="uid://dwgcx56yalawj" path="res://alex.tscn" id="2_3xosi"]
 
 [sub_resource type="Animation" id="Animation_wtcfe"]
 length = 0.001
@@ -65,10 +66,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -481.5
-offset_top = -57.0
-offset_right = 481.5
-offset_bottom = 57.0
+offset_left = -466.0
+offset_top = 247.0
+offset_right = 497.0
+offset_bottom = 361.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
@@ -76,6 +77,9 @@ size_flags_vertical = 4
 theme_override_font_sizes/normal_font_size = 58
 bbcode_enabled = true
 text = "[center] hello? [/center]"
+
+[node name="Alex" parent="CanvasLayer" unique_id=1994583944 instance=ExtResource("2_3xosi")]
+position = Vector2(297, 338)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=132913510]
 libraries/ = SubResource("AnimationLibrary_wtcfe")
