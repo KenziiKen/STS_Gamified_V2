@@ -1,0 +1,185 @@
+[gd_scene format=3 uid="uid://ci3ku863ll73e"]
+
+[ext_resource type="Script" uid="uid://phm7c8q60vb0" path="res://mini_game.gd" id="1_a1pjn"]
+[ext_resource type="FontFile" uid="uid://c8mbaylmii4qa" path="res://Matcha Style.ttf" id="1_snhvf"]
+[ext_resource type="AudioStream" uid="uid://dunn7i4n707yu" path="res://[Official] Until Then Original Soundtrack - Fun Fair.mp3" id="3_nh48r"]
+[ext_resource type="PackedScene" uid="uid://b1w6yuaqla7kw" path="res://boaty.tscn" id="4_5cju2"]
+
+[sub_resource type="Animation" id="Animation_a1pjn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("boaty:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-573, 327)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("boaty:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_5cju2"]
+resource_name = "boat"
+length = 2.0
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("boaty:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-573, 327), Vector2(-5, 327)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("boaty:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_nh48r"]
+resource_name = "new_animation"
+length = 2.0
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RichTextLabel:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -72), Vector2(0, 40)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Button:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("fade:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5cju2"]
+_data = {
+&"RESET": SubResource("Animation_a1pjn"),
+&"boat": SubResource("Animation_5cju2"),
+&"new_animation": SubResource("Animation_nh48r")
+}
+
+[node name="mini_game" type="Control" unique_id=764310297]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_a1pjn")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=908396323]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.3868625, 0.7425416, 1.3396775, 1)
+
+[node name="Panel" type="Panel" parent="." unique_id=1285304236]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 148.0
+grow_horizontal = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=427667833]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -576.0
+offset_top = -84.0
+offset_right = 1829.0
+offset_bottom = -15.0
+grow_horizontal = 2
+theme_override_fonts/normal_font = ExtResource("1_snhvf")
+theme_override_font_sizes/normal_font_size = 57
+fit_content = true
+
+[node name="Button" type="Button" parent="." unique_id=1776442718]
+visible = false
+layout_mode = 0
+offset_top = 174.0
+offset_right = 203.23636
+offset_bottom = 243.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_snhvf")
+theme_override_font_sizes/font_size = 32
+text = "next"
+
+[node name="fade" type="ColorRect" parent="." unique_id=1306119540]
+visible = false
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1694055139]
+libraries/ = SubResource("AnimationLibrary_5cju2")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=798302377]
+stream = ExtResource("3_nh48r")
+bus = &"Music"
+
+[node name="boaty" parent="." unique_id=45019633 instance=ExtResource("4_5cju2")]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-573, 327)
+scale = Vector2(4, 4)

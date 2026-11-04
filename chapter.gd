@@ -10,5 +10,6 @@ func _unhandled_input(event: InputEvent) -> void:
 		get_tree().quit()
 
 func _on_button_1_pressed() -> void:
-	fade.transition_to_scene("res://1_st_scene.tscn")
+	#fade.transition_to_scene("res://1_st_scene.tscn")
+	fade.transition_to_scene("res://cs_1.tscn")
 	pass # Replace with function body.

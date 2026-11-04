@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://b1w6yuaqla7kw"]
+
+[ext_resource type="Script" uid="uid://cyeg017hmbbp0" path="res://boaty.gd" id="1_03ue1"]
+[ext_resource type="Texture2D" uid="uid://nd45v3wl3tq2" path="res://boaty.png" id="1_w5xfm"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_03ue1"]
+a = Vector2(0, -12)
+b = Vector2(0, 15)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_qkd6g"]
+a = Vector2(27, 7)
+b = Vector2(2, 9)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_ftvp6"]
+a = Vector2(13, 19)
+b = Vector2(2, 9)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_ohp3p"]
+a = Vector2(13, 17)
+b = Vector2(3, 21)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6x825"]
+size = Vector2(17, 4)
+
+[node name="boaty" type="CharacterBody2D" unique_id=45019633]
+script = ExtResource("1_03ue1")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1940907676]
+position = Vector2(47, 8)
+texture = ExtResource("1_w5xfm")
+
+[node name="Button" type="Button" parent="." unique_id=1737991098]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 32.0
+offset_top = -5.0
+offset_right = 62.0
+offset_bottom = 23.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=316248114]
+position = Vector2(47, 8)
+shape = SubResource("SegmentShape2D_03ue1")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1612364368]
+position = Vector2(33, 7)
+shape = SubResource("SegmentShape2D_qkd6g")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="." unique_id=1263197448]
+position = Vector2(44, -12)
+shape = SubResource("SegmentShape2D_ftvp6")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="." unique_id=1122995623]
+position = Vector2(44, -11)
+shape = SubResource("SegmentShape2D_ohp3p")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="." unique_id=715428535]
+position = Vector2(47.5, 19)
+shape = SubResource("RectangleShape2D_6x825")
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
+[connection signal="button_up" from="Button" to="." method="_on_button_button_up"]

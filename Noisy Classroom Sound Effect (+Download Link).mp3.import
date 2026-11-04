@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://chvyi4uw8df02"
+path="res://.godot/imported/Noisy Classroom Sound Effect (+Download Link).mp3-9d6e53b412e352ee2521d688a1687bbf.mp3str"
+
+[deps]
+
+source_file="res://Noisy Classroom Sound Effect (+Download Link).mp3"
+dest_files=["res://.godot/imported/Noisy Classroom Sound Effect (+Download Link).mp3-9d6e53b412e352ee2521d688a1687bbf.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

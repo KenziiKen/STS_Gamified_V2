@@ -1,0 +1,200 @@
+[gd_scene format=3 uid="uid://dgebs0vgp6qwl"]
+
+[ext_resource type="Texture2D" uid="uid://d1ykbtqm87lki" path="res://docs/scn1.png" id="1_4ytc3"]
+[ext_resource type="Script" uid="uid://cmojq25aw60ff" path="res://cs_1.gd" id="1_kjcsb"]
+[ext_resource type="FontFile" uid="uid://c8mbaylmii4qa" path="res://Matcha Style.ttf" id="3_lhsue"]
+[ext_resource type="AudioStream" uid="uid://cmookf0g74add" path="res://Quiet Water.mp3" id="4_bqs5u"]
+[ext_resource type="AudioStream" uid="uid://chvyi4uw8df02" path="res://Noisy Classroom Sound Effect (+Download Link).mp3" id="5_1g4v7"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kjcsb"]
+texture = ExtResource("1_4ytc3")
+modulate_color = Color(0.4724152, 0.47241515, 0.47241515, 1)
+
+[sub_resource type="Animation" id="Animation_4ytc3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/ColorRect:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/Button:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/Button2:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_1g4v7"]
+resource_name = "fade_out"
+length = 2.0
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/ColorRect:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/Button:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/Button2:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_lhsue"]
+resource_name = "new_animation"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/ColorRect:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bqs5u"]
+_data = {
+&"RESET": SubResource("Animation_4ytc3"),
+&"fade_out": SubResource("Animation_1g4v7"),
+&"new_animation": SubResource("Animation_lhsue")
+}
+
+[node name="cs1" type="Node2D" unique_id=795947614]
+script = ExtResource("1_kjcsb")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1692840228]
+
+[node name="Panel" type="Panel" parent="CanvasLayer" unique_id=967365166]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_kjcsb")
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel2" type="Panel" parent="CanvasLayer" unique_id=1535199406]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -236.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Panel2" unique_id=1805709542]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -737.0
+offset_top = -82.5
+offset_right = 788.0
+offset_bottom = 44.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("3_lhsue")
+theme_override_font_sizes/normal_font_size = 64
+bbcode_enabled = true
+text = "*CLASS noise background*"
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1664447068]
+self_modulate = Color(0, 0, 0, 1)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer" unique_id=1610574012]
+root_node = NodePath("../..")
+libraries/ = SubResource("AnimationLibrary_bqs5u")
+
+[node name="Button" type="Button" parent="CanvasLayer" unique_id=138470518]
+visible = false
+offset_left = 16.0
+offset_top = 575.0
+offset_right = 217.0
+offset_bottom = 641.0
+theme_override_fonts/font = ExtResource("3_lhsue")
+theme_override_font_sizes/font_size = 32
+text = "next"
+autowrap_mode = 2
+
+[node name="Button2" type="Button" parent="CanvasLayer" unique_id=475553636]
+visible = false
+offset_left = 16.0
+offset_top = 575.0
+offset_right = 217.0
+offset_bottom = 641.0
+theme_override_fonts/font = ExtResource("3_lhsue")
+theme_override_font_sizes/font_size = 32
+text = "next"
+autowrap_mode = 2
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1610955746]
+stream = ExtResource("4_bqs5u")
+volume_db = -0.115
+bus = &"Music"
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="." unique_id=1039234939]
+stream = ExtResource("5_1g4v7")
+volume_db = -4.42
+
+[connection signal="pressed" from="CanvasLayer/Button2" to="." method="_on_button_2_pressed"]

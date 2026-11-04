@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://c8q3nxqx5ufkh"]
+
+[ext_resource type="Script" uid="uid://bua8w5nxygki4" path="res://music_slider.gd" id="1_5lat6"]
+
+[node name="music_slider" type="HSlider" unique_id=1871209053]
+offset_left = 388.0
+offset_top = 208.0
+offset_right = 669.0
+offset_bottom = 257.0
+max_value = 1.0
+step = 0.001
+script = ExtResource("1_5lat6")
+music = "Music"

@@ -23,9 +23,9 @@ func _ready() -> void:
 	var txt = create_tween()
 	txt.tween_property(text_, "visible_ratio", 1.0, 2.0)
 	
-	
 	await txt.finished
 	text_.visible_ratio = 0.0
+	
 	text_.text = "is this working?"
 	txt = create_tween()
 	txt.tween_property(text_, "visible_ratio", 1.0, 2.0)
