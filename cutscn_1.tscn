@@ -2,13 +2,63 @@
 
 [ext_resource type="Script" uid="uid://cxey0lv2k8vp" path="res://cutscn_1.gd" id="1_tsye8"]
 [ext_resource type="PackedScene" uid="uid://dwgcx56yalawj" path="res://alex.tscn" id="3_5sycg"]
-[ext_resource type="PackedScene" uid="uid://cs4rhl8cmkawl" path="res://fade.tscn" id="3_hh83w"]
+
+[sub_resource type="Animation" id="Animation_5sycg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_hh83w"]
+resource_name = "new_animation"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_o26gg"]
+_data = {
+&"RESET": SubResource("Animation_5sycg"),
+&"new_animation": SubResource("Animation_hh83w")
+}
 
 [sub_resource type="LabelSettings" id="LabelSettings_djgs7"]
 font_size = 37
 
 [node name="cutscn_1" type="Node2D" unique_id=2037829497]
 script = ExtResource("1_tsye8")
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=1474755048]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer2" unique_id=920062035]
+self_modulate = Color(0, 0, 0, 1)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer2" unique_id=6012732]
+libraries/ = SubResource("AnimationLibrary_o26gg")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1628428967]
 
@@ -42,6 +92,3 @@ vertical_alignment = 1
 
 [node name="Alex" parent="CanvasLayer" unique_id=373080059 instance=ExtResource("3_5sycg")]
 position = Vector2(329, 332)
-
-[node name="Fade" parent="CanvasLayer" unique_id=1156103037 instance=ExtResource("3_hh83w")]
-visible = false

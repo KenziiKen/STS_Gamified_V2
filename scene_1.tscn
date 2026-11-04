@@ -60,6 +60,9 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
+[node name="Alex" parent="CanvasLayer" unique_id=1994583944 instance=ExtResource("2_3xosi")]
+position = Vector2(297, 338)
+
 [node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer" unique_id=704794557]
 anchors_preset = 8
 anchor_left = 0.5
@@ -77,9 +80,6 @@ size_flags_vertical = 4
 theme_override_font_sizes/normal_font_size = 58
 bbcode_enabled = true
 text = "[center] hello? [/center]"
-
-[node name="Alex" parent="CanvasLayer" unique_id=1994583944 instance=ExtResource("2_3xosi")]
-position = Vector2(297, 338)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=132913510]
 libraries/ = SubResource("AnimationLibrary_wtcfe")

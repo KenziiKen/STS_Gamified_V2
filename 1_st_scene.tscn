@@ -1,0 +1,96 @@
+[gd_scene format=3 uid="uid://cuoi1ej00b0aw"]
+
+[ext_resource type="Script" uid="uid://2kpeu08ov8yc" path="res://1_st_scene.gd" id="1_2jiq1"]
+[ext_resource type="PackedScene" uid="uid://dwgcx56yalawj" path="res://alex.tscn" id="2_t0yiu"]
+
+[sub_resource type="Animation" id="Animation_ucuav"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect2:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Alex:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-133, 348)]
+}
+
+[sub_resource type="Animation" id="Animation_t0yiu"]
+resource_name = "alex_slide"
+length = 2.0
+step = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Alex:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-133, 348), Vector2(367, 325)]
+}
+
+[sub_resource type="Animation" id="Animation_2jiq1"]
+resource_name = "fade_in"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect2:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_t0yiu"]
+_data = {
+&"RESET": SubResource("Animation_ucuav"),
+&"alex_slide": SubResource("Animation_t0yiu"),
+&"fade_in": SubResource("Animation_2jiq1")
+}
+
+[node name="1st_scene" type="CanvasLayer" unique_id=1928103065]
+script = ExtResource("1_2jiq1")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=865336847]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.62382054, 0.78485453, 0.5719755, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=1341361150]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=105656635]
+libraries/ = SubResource("AnimationLibrary_t0yiu")
+
+[node name="Alex" parent="." unique_id=1994583944 instance=ExtResource("2_t0yiu")]
+position = Vector2(-133, 348)

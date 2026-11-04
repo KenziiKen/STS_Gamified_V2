@@ -7,7 +7,7 @@ var visible_text = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	Audio.get_node("/root/Audio").stream_paused = true
+	#Audio.get_node("/root/Audio").stream_paused = true
 	player.visible = false
 	if player:
 		player.velocity = Vector2.ZERO # Stops any lingering movement
