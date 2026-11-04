@@ -3,12 +3,14 @@
 [ext_resource type="Script" uid="uid://cucvkuv56vagn" path="res://chapter.gd" id="1_px6qp"]
 [ext_resource type="PackedScene" uid="uid://cs4rhl8cmkawl" path="res://fade.tscn" id="2_7ga1h"]
 [ext_resource type="Texture2D" uid="uid://c1y7ao0sbw52w" path="res://Alex_MM.png" id="2_aehld"]
+[ext_resource type="FontFile" uid="uid://c8mbaylmii4qa" path="res://Matcha Style.ttf" id="3_muyef"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_muyef"]
 texture = ExtResource("2_aehld")
 modulate_color = Color(0.60784316, 0.60784316, 0.60784316, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_dpt1k"]
+font = ExtResource("3_muyef")
 font_size = 53
 
 [node name="chapter" type="Control" unique_id=554245841]
@@ -41,18 +43,15 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_muyef")
 
 [node name="Label" type="Label" parent="." unique_id=1286787457]
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = 5
 anchor_left = 0.5
-anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -11.5
-offset_right = 20.0
-offset_bottom = 11.5
+offset_left = -166.0
+offset_top = 136.0
+offset_right = 166.0
+offset_bottom = 199.0
 grow_horizontal = 2
-grow_vertical = 2
-text = "CHAPTER SCN"
+text = "more chapters coming soon!"
 label_settings = SubResource("LabelSettings_dpt1k")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=801936379]
@@ -65,10 +64,119 @@ scale = Vector2(1.285, 1.285)
 
 [node name="back" type="Button" parent="VBoxContainer" unique_id=1879250941]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_muyef")
 theme_override_font_sizes/font_size = 24
 text = "< BACK "
 
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1838991451]
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="CanvasLayer" unique_id=1960242129]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 219.0
+offset_right = -736.90564
+offset_bottom = 111.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.795, 0.795)
+size_flags_vertical = 4
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="Button1" type="Button" parent="CanvasLayer/VBoxContainer2" unique_id=1387060584]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_muyef")
+theme_override_font_sizes/font_size = 65
+text = "chap 1"
+
+[node name="Button2" type="Button" parent="CanvasLayer/VBoxContainer2" unique_id=477262325]
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.37, 0.37, 0.37, 1)
+theme_override_fonts/font = ExtResource("3_muyef")
+theme_override_font_sizes/font_size = 65
+text = "chap 2"
+
+[node name="Button3" type="Button" parent="CanvasLayer/VBoxContainer2" unique_id=1711500552]
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.36862746, 0.36862746, 0.36862746, 1)
+theme_override_fonts/font = ExtResource("3_muyef")
+theme_override_font_sizes/font_size = 65
+text = "chap 3"
+
+[node name="Button4" type="Button" parent="CanvasLayer/VBoxContainer2" unique_id=1259231717]
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.36862746, 0.36862746, 0.36862746, 1)
+theme_override_fonts/font = ExtResource("3_muyef")
+theme_override_font_sizes/font_size = 65
+text = "chap 4"
+
+[node name="Button5" type="Button" parent="CanvasLayer/VBoxContainer2" unique_id=1150526207]
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.36862746, 0.36862746, 0.36862746, 1)
+theme_override_fonts/font = ExtResource("3_muyef")
+theme_override_font_sizes/font_size = 65
+text = "chap 5"
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="CanvasLayer" unique_id=1515455889]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 935.0
+offset_top = 218.00002
+offset_right = 198.27856
+offset_bottom = 110.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.795, 0.795)
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="Button2" type="Button" parent="CanvasLayer/VBoxContainer3" unique_id=387572390]
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.37, 0.37, 0.37, 1)
+theme_override_fonts/font = ExtResource("3_muyef")
+theme_override_font_sizes/font_size = 65
+text = "chap 6"
+
+[node name="Button6" type="Button" parent="CanvasLayer/VBoxContainer3" unique_id=1379148051]
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.37, 0.37, 0.37, 1)
+theme_override_fonts/font = ExtResource("3_muyef")
+theme_override_font_sizes/font_size = 65
+text = "chap 7"
+
+[node name="Button3" type="Button" parent="CanvasLayer/VBoxContainer3" unique_id=1017823522]
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.36862746, 0.36862746, 0.36862746, 1)
+theme_override_fonts/font = ExtResource("3_muyef")
+theme_override_font_sizes/font_size = 65
+text = "chap 8"
+
+[node name="Button4" type="Button" parent="CanvasLayer/VBoxContainer3" unique_id=788223486]
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.36862746, 0.36862746, 0.36862746, 1)
+theme_override_fonts/font = ExtResource("3_muyef")
+theme_override_font_sizes/font_size = 65
+text = "chap 9"
+
+[node name="Button5" type="Button" parent="CanvasLayer/VBoxContainer3" unique_id=2132027783]
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.36862746, 0.36862746, 0.36862746, 1)
+theme_override_fonts/font = ExtResource("3_muyef")
+theme_override_font_sizes/font_size = 65
+text = "chap 10"
+
 [node name="Fade" parent="." unique_id=1156103037 instance=ExtResource("2_7ga1h")]
-visible = false
 
 [connection signal="pressed" from="VBoxContainer/back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer2/Button1" to="." method="_on_button_1_pressed"]

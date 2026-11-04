@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c228g18eck5fr" path="res://control.gd" id="1_c1t8d"]
 [ext_resource type="Texture2D" uid="uid://cvl5wxkht6nom" path="res://hmn.png" id="2_g4wvt"]
+[ext_resource type="FontFile" uid="uid://c8mbaylmii4qa" path="res://Matcha Style.ttf" id="3_g4wvt"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_62e2m"]
 texture = ExtResource("2_g4wvt")
@@ -33,6 +34,7 @@ offset_left = 680.0
 offset_top = 24.0
 offset_right = 1019.0
 offset_bottom = 101.0
+theme_override_fonts/font = ExtResource("3_g4wvt")
 text = "Place holder"
 label_settings = SubResource("LabelSettings_0fbet")
 horizontal_alignment = 1
@@ -48,6 +50,7 @@ scale = Vector2(1.285, 1.285)
 
 [node name="back" type="Button" parent="VBoxContainer" unique_id=1491268981]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_g4wvt")
 theme_override_font_sizes/font_size = 24
 text = "< BACK "
 

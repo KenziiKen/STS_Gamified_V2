@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://7w43gdiwb6ll" path="res://scene_1.gd" id="1_3sd7o"]
 [ext_resource type="PackedScene" uid="uid://dwgcx56yalawj" path="res://alex.tscn" id="2_3xosi"]
+[ext_resource type="FontFile" uid="uid://c8mbaylmii4qa" path="res://Matcha Style.ttf" id="3_1abo5"]
 
 [sub_resource type="Animation" id="Animation_wtcfe"]
 length = 0.001
@@ -77,6 +78,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme_override_fonts/normal_font = ExtResource("3_1abo5")
 theme_override_font_sizes/normal_font_size = 58
 bbcode_enabled = true
 text = "[center] hello? [/center]"

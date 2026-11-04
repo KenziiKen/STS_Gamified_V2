@@ -1,11 +1,10 @@
 [gd_scene format=3 uid="uid://kq1m317dbkad"]
 
 [ext_resource type="Script" uid="uid://th5vly6iyegb" path="res://main_menu.gd" id="1_06t4h"]
-[ext_resource type="Texture2D" uid="uid://c1y7ao0sbw52w" path="res://Alex_MM.png" id="2_fu7sn"]
 [ext_resource type="PackedScene" uid="uid://cs4rhl8cmkawl" path="res://fade.tscn" id="3_fu7sn"]
+[ext_resource type="FontFile" uid="uid://c8mbaylmii4qa" path="res://Matcha Style.ttf" id="4_jix8l"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fu7sn"]
-texture = ExtResource("2_fu7sn")
 modulate_color = Color(0.60933006, 0.6093301, 0.60933006, 1)
 
 [node name="Main_menu" type="Control" unique_id=107471810]
@@ -24,7 +23,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.6935413, 0.74746555, 0.59368104, 1)
+color = Color(0.652875, 0.75, 0.4725, 1)
 
 [node name="Panel" type="Panel" parent="." unique_id=1645584374]
 layout_mode = 1
@@ -37,33 +36,53 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_fu7sn")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1336228482]
 layout_mode = 1
-anchors_preset = 4
+anchors_preset = 8
+anchor_left = 0.5
 anchor_top = 0.5
+anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 15.0
-offset_top = 18.0
-offset_right = 555.0
-offset_bottom = 203.0
+offset_left = -270.0
+offset_top = -16.375
+offset_right = 270.0
+offset_bottom = 192.375
+grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 25
 
 [node name="start" type="Button" parent="VBoxContainer" unique_id=817710729]
 layout_mode = 2
-theme_override_font_sizes/font_size = 52
+theme_override_fonts/font = ExtResource("4_jix8l")
+theme_override_font_sizes/font_size = 56
 text = "START"
-
-[node name="chapts" type="Button" parent="VBoxContainer" unique_id=139880232]
-layout_mode = 2
-theme_override_font_sizes/font_size = 52
-text = "CHAPTERS"
 
 [node name="credits" type="Button" parent="VBoxContainer" unique_id=2085858421]
 layout_mode = 2
-theme_override_font_sizes/font_size = 52
+theme_override_fonts/font = ExtResource("4_jix8l")
+theme_override_font_sizes/font_size = 56
 text = "CREDITS"
 
 [node name="Fade" parent="." unique_id=1156103037 instance=ExtResource("3_fu7sn")]
 
+[node name="Label" type="RichTextLabel" parent="." unique_id=834012961]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -492.0
+offset_top = -286.0
+offset_right = 492.0
+offset_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("4_jix8l")
+theme_override_font_sizes/normal_font_size = 123
+bbcode_enabled = true
+text = "[wave] STS GAMIFIED! [/wave]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [connection signal="pressed" from="VBoxContainer/start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="VBoxContainer/chapts" to="." method="_on_chapts_pressed"]
 [connection signal="pressed" from="VBoxContainer/credits" to="." method="_on_credits_pressed"]
