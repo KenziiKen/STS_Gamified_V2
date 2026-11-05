@@ -180,7 +180,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(2564.2473, 651.8), Vector2(1124.2476, 651.8)]
+"values": [Vector2(2564.2473, 651.8), Vector2(1476.2476, 651.8)]
 }
 
 [sub_resource type="Animation" id="Animation_e0u2j"]
@@ -212,7 +212,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(1124.2476, 651.8), Vector2(2564.2473, 651.8)]
+"values": [Vector2(1476.248, 651.8), Vector2(2564.2473, 651.8)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_5cju2"]
@@ -264,8 +264,9 @@ grow_horizontal = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=427667833]
 layout_mode = 1
+offset_top = -72.0
 offset_right = 2405.0
-offset_bottom = 69.0
+offset_bottom = -3.0
 theme_override_fonts/normal_font = ExtResource("1_snhvf")
 theme_override_font_sizes/normal_font_size = 57
 fit_content = true
