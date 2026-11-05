@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 Audio="*uid://dt6vw6wmgg4gn"
 
+[display]
+
+window/stretch/scale_mode="integer"
+
 [input]
 
 up={

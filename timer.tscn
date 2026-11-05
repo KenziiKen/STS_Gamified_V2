@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://ctyl8cno22r8u"]
+
+[ext_resource type="Script" uid="uid://dm3lr3rxo7drb" path="res://timer.gd" id="1_ye2uk"]
+[ext_resource type="FontFile" uid="uid://c8mbaylmii4qa" path="res://Matcha Style.ttf" id="2_o6fnk"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_mxtnu"]
+font = ExtResource("2_o6fnk")
+font_size = 48
+
+[node name="timer" type="Control" unique_id=2095031268]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ye2uk")
+
+[node name="Label" type="Label" parent="." unique_id=599093751]
+layout_mode = 0
+offset_left = 181.0
+offset_top = 76.0
+offset_right = 403.0
+offset_bottom = 133.0
+text = "00:00"
+label_settings = SubResource("LabelSettings_mxtnu")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Timer" type="Timer" parent="." unique_id=1058642218]
+one_shot = true

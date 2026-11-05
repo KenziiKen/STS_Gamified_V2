@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://cqieq8qjiydq"]
+
+[ext_resource type="Script" uid="uid://dxecejkaldshw" path="res://the_mini_game_3.gd" id="1_hbp8v"]
+[ext_resource type="PackedScene" uid="uid://ccjp4l74hkmnd" path="res://dock.tscn" id="2_ck7hk"]
+[ext_resource type="PackedScene" uid="uid://b1w6yuaqla7kw" path="res://boaty.tscn" id="3_sr6of"]
+
+[node name="the_mini_game" type="Control" unique_id=1335961965]
+layout_direction = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hbp8v")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=322039642]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.387, 0.743, 1.34, 1)
+
+[node name="dock" parent="." unique_id=803040996 instance=ExtResource("2_ck7hk")]
+position = Vector2(85, -30)
+scale = Vector2(1.5, 1.5)
+script = null
+
+[node name="dock2" parent="." unique_id=103278152 instance=ExtResource("2_ck7hk")]
+position = Vector2(837.00006, 184)
+scale = Vector2(1.5, 1.5)
+script = null
+
+[node name="dock3" parent="." unique_id=733341320 instance=ExtResource("2_ck7hk")]
+position = Vector2(1511, 105)
+scale = Vector2(1.5, 1.5)
+script = null
+
+[node name="boaty" parent="." unique_id=45019633 instance=ExtResource("3_sr6of")]
+position = Vector2(444, 767)
+scale = Vector2(4, 4)
+
+[connection signal="body_entered" from="dock" to="." method="_on_dock_body_entered"]
+[connection signal="body_entered" from="dock2" to="." method="_on_dock_2_body_entered"]
+[connection signal="body_entered" from="dock3" to="." method="_on_dock_3_body_entered"]

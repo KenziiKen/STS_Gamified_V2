@@ -1,6 +1,9 @@
 extends Control
 @onready var fade: CanvasLayer = $Fade
 
+func _ready() -> void:
+	Audio.get_node("/root/Audio").stream_paused = false
+
 func _on_start_pressed() -> void:
 	get_tree().change_scene_to_file("res://chapter.tscn")
 
