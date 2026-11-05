@@ -3,6 +3,90 @@
 [ext_resource type="Script" uid="uid://dxecejkaldshw" path="res://the_mini_game_3.gd" id="1_hbp8v"]
 [ext_resource type="PackedScene" uid="uid://ccjp4l74hkmnd" path="res://dock.tscn" id="2_ck7hk"]
 [ext_resource type="PackedScene" uid="uid://b1w6yuaqla7kw" path="res://boaty.tscn" id="3_sr6of"]
+[ext_resource type="FontFile" uid="uid://c8mbaylmii4qa" path="res://Matcha Style.ttf" id="4_ck7hk"]
+[ext_resource type="PackedScene" uid="uid://ctyl8cno22r8u" path="res://timer.tscn" id="4_sr6of"]
+[ext_resource type="AudioStream" uid="uid://b3ur1esnkaaw6" path="res://Bring It In, Guys!.mp3" id="6_ilnll"]
+
+[sub_resource type="Animation" id="Animation_plxgv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/ColorRect:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/Label:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_30cpo"]
+resource_name = "correct"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/ColorRect:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/Label:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sr6of"]
+_data = {
+&"RESET": SubResource("Animation_plxgv"),
+&"correct": SubResource("Animation_30cpo")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_ilnll"]
+font = ExtResource("4_ck7hk")
+font_size = 137
+shadow_size = 64
+shadow_color = Color(0.23657069, 0.45601088, 0.21910515, 1)
+shadow_offset = Vector2(-10.48, 6.96)
+
+[sub_resource type="LabelSettings" id="LabelSettings_sr6of"]
+font = ExtResource("4_ck7hk")
+font_size = 37
+shadow_size = 18
+shadow_color = Color(0.052046508, 0.23532578, 0.53245836, 1)
+shadow_offset = Vector2(-2.455, 2.32)
+
+[sub_resource type="LabelSettings" id="LabelSettings_xgbgl"]
+font = ExtResource("4_ck7hk")
+font_size = 37
+shadow_size = 18
+shadow_color = Color(0.052046508, 0.23532578, 0.53245836, 1)
+shadow_offset = Vector2(-2.455, 2.32)
 
 [node name="the_mini_game" type="Control" unique_id=1335961965]
 layout_direction = 1
@@ -29,18 +113,142 @@ scale = Vector2(1.5, 1.5)
 script = null
 
 [node name="dock2" parent="." unique_id=103278152 instance=ExtResource("2_ck7hk")]
-position = Vector2(837.00006, 184)
+position = Vector2(727, 17)
 scale = Vector2(1.5, 1.5)
 script = null
 
 [node name="dock3" parent="." unique_id=733341320 instance=ExtResource("2_ck7hk")]
-position = Vector2(1511, 105)
+position = Vector2(1364, 108)
 scale = Vector2(1.5, 1.5)
 script = null
 
 [node name="boaty" parent="." unique_id=45019633 instance=ExtResource("3_sr6of")]
 position = Vector2(444, 767)
 scale = Vector2(4, 4)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=121576110]
+libraries/ = SubResource("AnimationLibrary_sr6of")
+
+[node name="ColorRect" type="ColorRect" parent="AnimationPlayer" unique_id=610321040]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.4157087, 0.82843757, 0.5750394, 1)
+
+[node name="Label" type="Label" parent="AnimationPlayer" unique_id=1124425297]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "CORRECT!!"
+label_settings = SubResource("LabelSettings_ilnll")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="." unique_id=639255592]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -91.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "How do the Sumerian sailboat and the Roman aqueduct both demonstrate how a civilization's physical environment drives technological innovation?"
+label_settings = SubResource("LabelSettings_sr6of")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="timer" parent="." unique_id=2095031268 instance=ExtResource("4_sr6of")]
+layout_mode = 1
+offset_left = -215.0
+offset_top = -70.0
+offset_right = -964.0
+offset_bottom = -559.0
+
+[node name="Label2" type="Label" parent="." unique_id=1828006921]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.0
+offset_top = -237.0
+offset_right = 825.0
+offset_bottom = 136.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "The Sumerians used 
+sailboats to navigate 
+local rivers for trade, 
+while the Romans 
+used gravity-driven 
+aqueducts to transport 
+water into city centers, 
+freeing them from local water constraints."
+label_settings = SubResource("LabelSettings_xgbgl")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="." unique_id=181990306]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -266.0
+offset_top = -346.0
+offset_right = 206.0
+offset_bottom = -67.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "The Sumerians 
+developed sailboats 
+to cross mountain ranges, 
+while the Romans built aqueducts 
+across deserts to harvest timber."
+label_settings = SubResource("LabelSettings_xgbgl")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="." unique_id=1390498623]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -815.0
+offset_top = -251.0
+offset_right = -387.0
+offset_bottom = 28.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Both inventions 
+were designed solely 
+for military defense 
+to protect urban 
+populations from
+ foreign invaders."
+label_settings = SubResource("LabelSettings_xgbgl")
+vertical_alignment = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=504482977]
+stream = ExtResource("6_ilnll")
+bus = &"Music"
 
 [connection signal="body_entered" from="dock" to="." method="_on_dock_body_entered"]
 [connection signal="body_entered" from="dock2" to="." method="_on_dock_2_body_entered"]

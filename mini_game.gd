@@ -6,8 +6,6 @@ extends Control
 @onready var no_btn: Button = $Button3
 @onready var ready_btn: Button = $Button2
 
-
-
 var dialogue_lines: Array[String] = [
 	"	Sir: Let's play a game!",
 	"	Alex: ? ? ?",

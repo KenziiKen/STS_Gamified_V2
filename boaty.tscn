@@ -8,6 +8,7 @@ a = Vector2(-2, -7)
 b = Vector2(-2, 41)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_03ue1"]
+radius = 19.646883
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_qkd6g"]
 b = Vector2(16, 4)
@@ -25,9 +26,9 @@ texture = ExtResource("1_w5xfm")
 
 [node name="Button" type="Button" parent="." unique_id=1737991098]
 self_modulate = Color(1, 1, 1, 0)
-offset_left = 19.0
-offset_top = -19.0
-offset_right = 77.0
+offset_left = 9.0
+offset_top = -23.0
+offset_right = 86.0
 offset_bottom = 39.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=729569670]
@@ -35,7 +36,7 @@ position = Vector2(48, -10)
 shape = SubResource("SegmentShape2D_03ue1")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=839198088]
-position = Vector2(54, 2)
+position = Vector2(53, -1)
 shape = SubResource("CircleShape2D_03ue1")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="." unique_id=342989374]
